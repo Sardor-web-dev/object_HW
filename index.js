@@ -58,7 +58,7 @@ const topStudent = students.reduce((top, student) =>
     average(student.grades) > average(top.grades) ? student : top
 );
 
-// Добавляем статус и выводим информацию
+// Добавляем статус и выводим информациюgit commit -m "commit"
 students.forEach(student => {
     student.status = average(student.grades) >= 90 ? "Отличник" : "Хорошист";
     console.log(`Имя: ${student.name}, Статус: ${student.status}`);
