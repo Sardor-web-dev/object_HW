@@ -51,25 +51,17 @@ let students = [
 ];
 
 // Функция для расчета среднего балла
-function calculateAverage(grades) {
-    let sum = grades.reduce((a, b) => a + b, 0);
-    return sum / grades.length;
-}
+const average = grades => grades.reduce((sum, grade) => sum + grade, 0) / grades.length;
 
 // Находим студента с наивысшим средним баллом
-let topStudent = students.reduce((prev, current) => {
-    return (calculateAverage(prev.grades) > calculateAverage(current.grades)) ? prev : current;
+const topStudent = students.reduce((top, student) => 
+    average(student.grades) > average(top.grades) ? student : top
+);
+
+// Добавляем статус и выводим информацию
+students.forEach(student => {
+    student.status = average(student.grades) >= 90 ? "Отличник" : "Хорошист";
+    console.log(`Имя: ${student.name}, Статус: ${student.status}`);
 });
 
-// Добавляем новое поле status для каждого студента
-students = students.map(student => {
-    return {
-        ...student,
-        status: calculateAverage(student.grades) >= 90 ? "Отличник" : "Хорошист"
-    };
-});
-students.
-// Выводим список всех студентов с их статусом
-students.forEach(student => {
-    console.log(`Имя: ${student.name}, Возраст: ${student.age}, Средний балл: ${calculateAverage(student.grades).toFixed(2)}, Статус: ${student.status}`);
-});
+console.log(`Студент с наивысшим средним баллом: ${topStudent.name}`);
