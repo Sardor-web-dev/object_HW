@@ -64,4 +64,4 @@ students.forEach(student => {
     console.log(`Имя: ${student.name}, Статус: ${student.status}`);
 });
 
-console.log(`Студент с наивысшим средним баллом: ${topStudent.name}`);
+console.log("Студент с наивысшим средним баллом:", topStudent.name);
