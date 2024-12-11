@@ -38,10 +38,6 @@ console.log(total);
 // ];
  
 
-// function calculateAverage(grades) {
-//     let sum = grades.forEach((a, b) => a + b, 0);
-//     return sum / grades.length;
-// }
 
 
 let students = [
