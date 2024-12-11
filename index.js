@@ -19,7 +19,9 @@ total = first + second + third
 console.log(total);
 
 
+
 //Второе задание
+
 let students = [
     { name: "Ali", age: 18, grades: [90, 95, 85] },
     { name: "Leyla", age: 19, grades: [80, 75, 85] },
