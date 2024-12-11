@@ -19,42 +19,22 @@ total = first + second + third
 console.log(total);
 
 
-
-// Второе задание
-// let students = [
-//     {
-//         name: "Ali",
-//         age: 18,
-//         grades: [90, 85, 85]
-//     },    {
-//         name: "Leyla",
-//         age: 19,
-//         grades: [80, 75, 85]
-//     },    {
-//         name: "Omar",
-//         age: 20,
-//         grades: [100, 95, 90]
-//     }
-// ];
- 
-
-
-
+//Второе задание
 let students = [
     { name: "Ali", age: 18, grades: [90, 95, 85] },
     { name: "Leyla", age: 19, grades: [80, 75, 85] },
     { name: "Omar", age: 20, grades: [100, 95, 90] }
 ];
 
-// Функция для расчета среднего балла
+
 const average = grades => grades.reduce((sum, grade) => sum + grade, 0) / grades.length;
 
-// Находим студента с наивысшим средним баллом
+
 const topStudent = students.reduce((top, student) => 
     average(student.grades) > average(top.grades) ? student : top
 );
 
-// Добавляем статус и выводим информацию 
+
 students.forEach(student => {
     student.status = average(student.grades) >= 90 ? "Отличник" : "Хорошист";
     console.log(`Имя: ${student.name}, Статус: ${student.status}`);
