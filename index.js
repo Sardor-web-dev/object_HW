@@ -16,17 +16,6 @@ let total = 0
 
 total = first + second + third
 
-console.log(total);
-
-
-
-//Второе задание
-
-let students = [
-    { name: "Ali", age: 18, grades: [90, 95, 85] },
-    { name: "Leyla", age: 19, grades: [80, 75, 85] },
-    { name: "Omar", age: 20, grades: [100, 95, 90] }
-];
 
 
 const average = grades => grades.reduce((sum, grade) => sum + grade, 0) / grades.length;
